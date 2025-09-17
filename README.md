@@ -100,7 +100,7 @@ public class TraceLogicExample
 
 1.  **Clone the repository:**
     ```sh
-    git clone [https://github.com/VerisFlow/TraceLogic.git](https://github.com/VerisFlow/TraceLogic.git)
+    git clone https://github.com/VerisFlow/TraceLogic.git
     ```
 2.  **Navigate to the directory:**
     ```sh
@@ -118,6 +118,5 @@ The executables will be located in the respective `bin/Debug` or `bin/Release` f
 
 ## Project Structure
 
-* `TraceLogic/`: The solution root.
 * `TraceLogic.Core/`: The core class library containing all parsing logic and data models. This project is platform-agnostic.
 * `TraceLogic/`: The WPF/WinForms desktop application project that provides the GUI.

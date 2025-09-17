@@ -14,7 +14,7 @@ The project is composed of two main parts:
 
 * **Robust Parsing**: Handles the step-by-step logic of Hamilton's `.trc` files.
 * **Hierarchical Data Models**: Raw log lines (`TraceEntry`) are aggregated into logical `PipettingStep`s (aspirate/dispense).
-* ** GUI**: The Trace Extractor UI allows for simple drag-and-drop or file selection, with clear results and data export capabilities.
+* **GUI**: The Trace Extractor UI allows for simple drag-and-drop or file selection, with clear results and data export capabilities.
 * **Programmatic Access**: The `TraceLogic.Core` library can be used independently for automated analysis pipelines.
 
 ---

@@ -1,5 +1,7 @@
 # TraceLogic: Trace File Parser
 
+[![Latest Release](https://img.shields.io/github/v/release/VerisFlow/TraceLogicLocal)](https://github.com/VerisFlow/TraceLogicLocal/releases)
+
 **TraceLogic** is a .NET application and library designed to parse and extract meaningful data from Hamilton Venus trace (`.trc`) files. It translates complex, low-level log entries into a simple, high-level list of liquid transfer events, making it easy to verify and analyze liquid handling operations.
 
 The project is composed of two main parts:

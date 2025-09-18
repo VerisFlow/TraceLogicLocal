@@ -17,7 +17,18 @@ The project is composed of two main parts:
 * **Robust Parsing**: Handles the step-by-step logic of Hamilton's `.trc` files.
 * **Hierarchical Data Models**: Raw log lines (`TraceEntry`) are aggregated into logical `PipettingStep`s (aspirate/dispense).
 * **GUI**: The Trace Extractor UI allows for simple drag-and-drop or file selection, with clear results and data export capabilities.
+* **Customizable Export**: Select and reorder columns for tailored CSV reports.
 * **Programmatic Access**: The `TraceLogic.Core` library can be used independently for automated analysis pipelines.
+
+---
+
+## How It Works
+
+The core parsing engine reads a `.trc` file line by line and logically connects related events. Pipetting actions in a trace file are typically recorded with separate "start" and "complete" entries.
+
+The parser identifies the start of a pipetting command (e.g., Aspirate, Dispense) and then searches forward in the file for the matching "complete" entry. The "complete" entry contains the rich details of the action, such as volumes and labware coordinates for each channel.
+
+By pairing these `Start` and `Complete` entries, the parser constructs a `PipettingStep` object. This object represents a single, complete action, capturing its start time, end time, and all associated channel-level details. 
 
 ---
 
@@ -88,6 +99,21 @@ public class TraceLogicExample
     }
 }
 ```
+
+---
+
+## Roadmap / ToDo
+
+This is a list of planned features and improvements for future releases:
+
+* **Advanced Error and Warning Analysis**:
+    * Detect, categorize, and report on specific errors (e.g., liquid level detection, hardware errors) and warnings that occur during a run.
+    * Provide a dedicated view or report for all non-nominal events.
+* **Barcode Event Parsing**:
+    * Extract barcode scanning events from the trace file.
+    * Correlate scanned barcodes with specific labware IDs and track them throughout the process.
+* **Data Visualization**:
+    * Implement graphical representations of the data, such as a timeline of events or a visual map of liquid transfers on the deck.
 
 ---
 

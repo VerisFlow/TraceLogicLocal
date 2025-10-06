@@ -22,7 +22,7 @@ Before you start writing code, you'll need to set up your development environmen
 
 1.  Fork the repository on GitHub and then clone your fork locally:
     ```sh
-    git clone [https://github.com/VerisFlow/TraceLogicLocal.git](https://github.com/VerisFlow/TraceLogicLocal.git)
+    git clone https://github.com/VerisFlow/TraceLogicLocal.git
     cd TraceLogicLocal
     ```
 2.  Open the `TraceLogic.sln` solution file in Visual Studio 2022.
